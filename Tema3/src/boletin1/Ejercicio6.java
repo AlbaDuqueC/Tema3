@@ -28,10 +28,10 @@ public class Ejercicio6 {
 		for (int num : tabla) {
 
 			if (num % 2 == 0) {
-				System.out.print(num + " par");
+				System.out.print(num + " par, ");
 			} else {
 
-				System.out.print(num + " impar");
+				System.out.print(num + " impar, ");
 			}
 		}
 		
