@@ -23,18 +23,28 @@ public class Exercise1 {
 		
 		answer= sc.nextLine();
 		
-		if(answer.equalsIgnoreCase("a")){
-			System.out.println(Arrays.toString(numbers));
-			
-		}else if(answer.equalsIgnoreCase("b")) {
-			
+		switch(answer.toLowerCase()){
+		case equalsIgnoreCase("A")->
+		System.out.println(Arrays.toString(numbers));
+		
+		case equalsIgnoreCase("B") ->{
+		
 			System.out.println("");
 			value= sc.nextInt();
 			System.out.println("");
 			position= sc.nextInt();
+		}
+		}
+		
+		
+		
+			
+			
+		 
+			
 			
 			System.out.println();
-		}
+		
 		
 		
 		
