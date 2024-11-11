@@ -8,8 +8,6 @@ public class Ejercicio4 {
 
 	public static void main(String[] args) {
 		
-		//-Arreglar el catch-
-		
 		// Variable
 
 		int puntuaciones[] = new int[8];
@@ -23,9 +21,9 @@ public class Ejercicio4 {
 
 				try {
 					System.out.println("Introduzca un valor de la tabla:");
-					puntos = sc.nextInt();
+					puntuaciones[i] = sc.nextInt();
 					
-					assert puntos<=2800 && puntos>=1000 : "Error";
+					assert puntuaciones[i]<=2800 && puntuaciones[i]>=1000 : "Error";
 					error = false;
 
 				} catch (InputMismatchException e) {
@@ -39,11 +37,13 @@ public class Ejercicio4 {
 
 			}
 
-			puntuaciones[i] = puntos;
+	
 
 		}
 		Arrays.sort(puntuaciones);
-		System.out.println(Arrays.toString(puntuaciones));
+		for(int j = 7; j>=0; j--) {
+		System.out.println(puntuaciones[j]);
+		}
 		
 		sc.close();
 
