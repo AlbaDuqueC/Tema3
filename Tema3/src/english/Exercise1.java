@@ -23,11 +23,11 @@ public class Exercise1 {
 		
 		answer= sc.nextLine();
 		
-		switch(answer.toLowerCase()){
-		case equalsIgnoreCase("A")->
+		switch(answer.toUpperCase()){
+		case ("A")->
 		System.out.println(Arrays.toString(numbers));
 		
-		case equalsIgnoreCase("B") ->{
+		case ("B") ->{
 		
 			System.out.println("");
 			value= sc.nextInt();
