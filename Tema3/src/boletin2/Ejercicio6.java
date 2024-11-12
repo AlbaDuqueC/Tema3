@@ -8,9 +8,9 @@ public class Ejercicio6 {
 	public static void main(String[] args) {
 		// Variables
 
-		int tabla1[] = new int[6];
+		int primitiva[] = new int[6];
 
-		int tabla2[] = {3, 8, 12, 34, 43, 48};
+		int resultado[] = {3, 8, 12, 34, 43, 48};
 		int busqueda;
 		int i=0;
 		int num;
@@ -22,26 +22,27 @@ public class Ejercicio6 {
 
 			num = rand.nextInt(1, 50);
 			
-
-			tabla1[i] = num;
-			Arrays.sort(tabla1);
-			busqueda= Arrays.binarySearch(tabla1, num);
+			Arrays.sort(primitiva);
+			busqueda= Arrays.binarySearch(primitiva, num);
 			if(busqueda<0) {
-				tabla1[0]=num;
+				primitiva[0]=num;
 				i++;
 			}
 			
 			
 		}
-		System.out.println(Arrays.toString(tabla1));
 		
-		for(int valor: tabla1) {
-			busqueda= Arrays.binarySearch(tabla2, valor);
+		
+		for(int valor: primitiva) {
+			busqueda= Arrays.binarySearch(resultado, valor);
+			if(busqueda>=0) {
 			numAciertos++;
+			}
 		}
 		System.out.println("Numero de aciertos: " + numAciertos);
 		
-		
+		System.out.println("Primitiva: "+Arrays.toString(primitiva));
+		System.out.println("Resultado: "+ Arrays.toString(resultado));
 
 	}
 
