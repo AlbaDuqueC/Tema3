@@ -7,9 +7,10 @@ public class Ejercicio2 {
 	public static void main(String[] args) {
 		// Variables
 		
-		
+		// Tabla que almacenas todas las notas
 		double tabla[][]= new double [4][5];
 		
+		//
 		double notaTotal=0;
 		double notaMedia=0;
 		double notaMin=10;
@@ -30,7 +31,7 @@ public class Ejercicio2 {
 		}
 		for(int i=0; i<4; i++) {
 			System.out.print("Alumno "+ (i+1) + ":");
-			System.out.print("   Notas: ");
+			System.out.print("\t Notas: ");
 			for(int j=0; j<5; j++) {
 				
 				//Imprime la tabla
@@ -46,16 +47,16 @@ public class Ejercicio2 {
 				notaTotal= notaTotal+ tabla[i][j];
 			}
 			//Imprime la notaMin
-			System.out.print("   Nota Min: "+ notaMin);
+			System.out.print("\t Nota Min: "+ notaMin);
 			
 			//Imprime la notaMax
-			System.out.print("   Nota Max: "+ notaMax);
+			System.out.print("\t Nota Max: "+ notaMax);
 			
 			//Calcula la nota media
 			notaMedia=notaTotal/5;
 			
 			//Imprime la nota media
-			System.out.print("   Nota Media: "+notaMedia);
+			System.out.print("\t Nota Media: "+notaMedia);
 			System.out.println();
 			
 			//Borra los datos anteriores
