@@ -8,6 +8,7 @@ public class Ejercicio3 {
 	public static void main(String[] args) {
 		// Variables
 
+		// 
 		int tabla[][];
 		
 		int filas;
