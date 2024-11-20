@@ -1,4 +1,4 @@
-package boletin4;
+package boletin4parte1;
 
 public class Ejercicio2 {
 
