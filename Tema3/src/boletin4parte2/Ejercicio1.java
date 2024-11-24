@@ -8,14 +8,12 @@ public class Ejercicio1 {
 	public static void main(String[] args) {
 		// Variables
 
+		// Tabla bidimensionar de 6x10
 		int tabla[][] = new int[6][10];
 
 		Random rand = new Random();
 
-		int respuestamax = max(tabla);
-
-		int respuestamin = min(tabla);
-
+		// Inserta en la tabla numeros aleatorios
 		for (int i = 0; i < tabla.length; i++) {
 
 			for (int j = 0; j < tabla[i].length; j++) {
@@ -25,13 +23,18 @@ public class Ejercicio1 {
 			}
 		}
 
+		// Imprime la tabla
 		System.out.println(Arrays.deepToString(tabla));
 
-		System.out.println("minimo: " + respuestamin);
-		System.out.println("maximo: " + respuestamax);
+		// Imprime el minimo
+		System.out.println("minimo: " + min(tabla));
+
+		// Imprime el max
+		System.out.println("maximo: " + max(tabla));
 
 	}
 
+	// Calcula el maximo
 	static int max(int tabla[][]) {
 
 		int max = 0;
@@ -52,9 +55,10 @@ public class Ejercicio1 {
 
 	}
 
+	// Calcula el minimo
 	static int min(int tabla[][]) {
 
-		int min = 0;
+		int min = 1001;
 
 		for (int i = 0; i < tabla.length; i++) {
 
@@ -67,9 +71,9 @@ public class Ejercicio1 {
 				}
 
 			}
-		
+		}
+
 		return min;
 
 	}
-
 }
