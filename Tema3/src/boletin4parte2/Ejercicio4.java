@@ -26,46 +26,55 @@ public class Ejercicio4 {
 
 		int suma2 = 0;
 
-		int suma3 = 0;
+		int num = 0;
 
-		for (int i = 0; i < tabla.length; i++) {
+		for (int i = 0; i < tabla.length && magia; i++) {
 
 			suma2 = 0;
 
 			suma1 = 0;
 
-			for (int j = 0; j < tabla.length; j++) {
+			for (int j = 0; j < tabla.length ; j++) {
+				
+				
+				
 
-				suma1 = suma1 + tabla[0][j];
+				suma1 +=tabla[i][j];
 
-				suma2 = suma2 + tabla[i][j];
+				suma2 +=tabla[j][i];
+				
+				if (i==0) {
+					
+					num +=tabla[0][j];
+				}
+				
+				magia= verificar(suma1, suma2, num);
+				
+				
 
 			}
+			
+			
 
 		}
 
-		for (int i = 0; i < tabla.length; i++) {
-
-			suma3 = 0;
-
-			for (i = 0; i < tabla.length; i++) {
-
-				suma3 = suma3 + tabla[j][i];
-
-			}
-
-		}
-
-		if (suma1 != suma2) {
-
-			magia = false;
-		}
-		
-		if (suma1 != suma3) {
-			magia = false;
-		}
 
 		return magia;
 
+	}
+
+	static boolean verificar(int suma1, int suma2, int num) {
+		
+		boolean verificar=true;
+		
+		
+		
+		
+		
+		if(num!=suma1 || num !=suma2) {
+			verificar= false;
+		}
+				
+		return verificar;
 	}
 }
