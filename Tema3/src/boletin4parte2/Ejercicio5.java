@@ -43,10 +43,10 @@ public class Ejercicio5 {
 			
 			for(int j=0; j<tabla1[i].length; j++) {
 			
-				numi=j;
+
 				numj=(tabla1.length-1-i);
 				
-				 tabla[i][j]=tabla1[numi][numj];
+				 tabla[j][numj]=tabla1[i][j];
 				
 		}
 		}
