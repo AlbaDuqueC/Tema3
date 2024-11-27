@@ -30,7 +30,6 @@ public class Ejercicio5 {
 			System.out.println();
 
 		}
-		
 
 	}
 	static int[][] gira90(int tabla1[][]){
