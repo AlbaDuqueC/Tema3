@@ -8,13 +8,20 @@ public class Ejercicio1 {
 	static Scanner sc = new Scanner(System.in);
 
 	public static void main(String[] args) {
+		
 		// Variables
+		
+		/*Tabla que almacena numeros random que se introduce junto
+		 *  a sus dimensiones medianete el static dimeniones*/
 		int tabla[][] = dimensiones();
 
+		/*Variable introducido en el static valor*/
 		int num = valor();
 
+		/*Variable que muestra si el numero esta o no en la tambla*/
 		boolean estar = false;
 
+		/**/
 		for (int i = 0; i < tabla.length; i++) {
 
 			for (int j = 0; j < tabla[i].length; j++) {
