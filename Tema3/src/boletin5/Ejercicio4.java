@@ -101,6 +101,7 @@ public class Ejercicio4 {
 
 	}
 
+	//Torre
 	static String[][] Torre(String tablero[][], int posFila, int posColumna) {
 		String[][] tableroT = new String[8][8];
 
@@ -135,6 +136,7 @@ public class Ejercicio4 {
 		return tableroT;
 	}
 
+	//Alfil
 	static String[][] Alfil(String tablero[][], int posFila, int posColumna) {
 
 		String[][] tableroA = new String[8][8];
@@ -254,6 +256,7 @@ public class Ejercicio4 {
 		return tableroA;
 	}
 
+	//Dama
 	static String[][] Dama(String tablero[][], int posFila, int posColumna) {
 
 		String[][] tableroD = new String[8][8];
@@ -290,37 +293,60 @@ public class Ejercicio4 {
 
 		return tableroD;
 	}
-	
-	
-//Esta mal, si lo ònes en un sitio que no se pueden poner todas la X da error
+
+	//Caballo
 	static String[][] Caballo(String tablero[][], int posFila, int posColumna) {
 		String[][] tableroC = new String[8][8];
 
 		tableroC[posFila][posColumna] = "  C  ,";
+
+		String movimiento = "  X  ,";
+
 		
-		for (int i = 0; i < tableroC.length; i++) {
-
-			for (int j = 0; j < tableroC[i].length; j++) {
-
-
-		tableroC[posFila - 1][posColumna - 2] = "  X  ,";
-
-		tableroC[posFila - 2][posColumna - 1] = "  X  ,";
-
-		tableroC[posFila - 1][posColumna + 2] = "  X  ,";
-
-		tableroC[posFila - 2][posColumna + 1] = "  X  ,";
-
-		tableroC[posFila + 1][posColumna - 2] = "  X  ,";
-
-		tableroC[posFila + 2][posColumna - 1] = "  X  ,";
-
-		tableroC[posFila + 1][posColumna + 2] = "  X  ,";
-
-		tableroC[posFila + 2][posColumna + 1] = "  X  ,";
-		
-			}}
+		if( posFila - 1 >= 0 && posColumna - 2 >= 0 ) {
 			
+			tableroC[posFila - 1][posColumna - 2] = movimiento;
+			
+		}
+		
+		if(posFila - 2 >= 0 && posColumna - 1 >= 0 ) {
+			
+			tableroC[posFila - 2][posColumna - 1] = movimiento;
+			
+		}
+		
+		if(posFila - 1 >= 0 && posColumna + 2 < tablero.length) {
+			
+			tableroC[posFila - 1][posColumna + 2] = movimiento;
+		}
+		
+		if(posFila - 2 >= 0 && posColumna + 1 < tablero.length ) {
+			
+			tableroC[posFila - 2][posColumna + 1] = movimiento;
+
+		}
+		
+		if(posFila + 1 < tablero.length && posColumna - 2 >= 0 ) {
+			
+			tableroC[posFila + 1][posColumna - 2] = movimiento;
+		}
+		
+		if(posFila + 2 < tablero.length && posColumna - 1 >= 0) {
+			
+			tableroC[posFila + 2][posColumna - 1] = movimiento;
+		}
+		
+		if(posFila + 1 < tablero.length && posColumna + 2 < tablero.length) {
+			
+			tableroC[posFila + 1][posColumna + 2] = movimiento;
+
+		}
+		
+		if(posFila + 2 < tablero.length && posColumna + 1 < tablero.length) {
+			
+			tableroC[posFila + 2][posColumna + 1] = movimiento;
+		}
+		
 
 		for (int i = 0; i < tableroC.length; i++) {
 
