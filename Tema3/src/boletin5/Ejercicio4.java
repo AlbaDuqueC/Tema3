@@ -14,8 +14,12 @@ public class Ejercicio4 {
 		int posColumna;
 
 		char pieza;
+		
+		boolean salir = true;
 
 		Scanner sc = new Scanner(System.in);
+		
+		do {
 
 		System.out.println("¿Que pieza es?");
 
@@ -28,6 +32,10 @@ public class Ejercicio4 {
 		System.out.println("¿En que columna hay?");
 
 		posColumna = sc.nextInt();
+
+		
+		
+		}while(!salir);
 
 		switch (pieza) {
 
