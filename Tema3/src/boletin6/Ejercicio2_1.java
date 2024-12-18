@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Ejercicio2_1 {
 
 	public static void main(String[] args) {
-		// Variables
+		// Variables si
 		String contraseña;
 
 		String intento;
