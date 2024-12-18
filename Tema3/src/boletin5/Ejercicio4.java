@@ -40,8 +40,12 @@ public class Ejercicio4 {
 		switch (pieza) {
 
 		case 'T' -> {
+			
+			
 
 			tablero = Torre(tablero, posFila, posColumna);
+			
+			tablero= Nulos(tablero, posFila, posColumna);
 
 			for (int i = 0; i < tablero.length; i++) {
 				for (int j = 0; j < tablero[i].length; j++) {
@@ -57,6 +61,8 @@ public class Ejercicio4 {
 		case 'A' -> {
 
 			tablero = Alfil(tablero, posFila, posColumna);
+			
+			tablero= Nulos(tablero, posFila, posColumna);
 
 			for (int i = 0; i < tablero.length; i++) {
 				for (int j = 0; j < tablero[i].length; j++) {
@@ -72,6 +78,8 @@ public class Ejercicio4 {
 		case 'D' -> {
 
 			tablero = Dama(tablero, posFila, posColumna);
+			
+			tablero= Nulos(tablero, posFila, posColumna);
 
 			for (int i = 0; i < tablero.length; i++) {
 				for (int j = 0; j < tablero[i].length; j++) {
@@ -87,6 +95,8 @@ public class Ejercicio4 {
 		case 'C' -> {
 
 			tablero = Caballo(tablero, posFila, posColumna);
+			
+			tablero= Nulos(tablero, posFila, posColumna);
 
 			for (int i = 0; i < tablero.length; i++) {
 				for (int j = 0; j < tablero[i].length; j++) {
@@ -129,17 +139,7 @@ public class Ejercicio4 {
 			}
 		}
 
-		for (int i = 0; i < tableroT.length; i++) {
-
-			for (int j = 0; j < tableroT[i].length; j++) {
-
-				if (tableroT[i][j] == null) {
-					tableroT[i][j] = "     ,";
-
-				}
-			}
-
-		}
+		
 
 		return tableroT;
 	}
@@ -248,18 +248,6 @@ public class Ejercicio4 {
 
 		}
 
-		for (int i = 0; i < tableroA.length; i++) {
-
-			for (int j = 0; j < tableroA[i].length; j++) {
-
-				if (tableroA[i][j] == null) {
-
-					tableroA[i][j] = "     ,";
-
-				}
-			}
-
-		}
 
 		return tableroA;
 	}
@@ -268,7 +256,7 @@ public class Ejercicio4 {
 	static String[][] Dama(String tablero[][], int posFila, int posColumna) {
 
 		String[][] tableroD = new String[8][8];
-
+		
 		tableroD = Alfil(tablero, posFila, posColumna);
 
 		tableroD[posFila][posColumna] = "  D  ,";
@@ -285,18 +273,6 @@ public class Ejercicio4 {
 			if (i != posFila) {
 				tableroD[i][posColumna] = "  X  ,";
 			}
-		}
-
-		for (int i = 0; i < tableroD.length; i++) {
-
-			for (int j = 0; j < tableroD[i].length; j++) {
-
-				if (tableroD[i][j] == null) {
-					tableroD[i][j] = "     ,";
-
-				}
-			}
-
 		}
 
 		return tableroD;
@@ -354,22 +330,29 @@ public class Ejercicio4 {
 			
 			tableroC[posFila + 2][posColumna + 1] = movimiento;
 		}
+
+		return tableroC;
+
+	}
+	
+	static String[][] Nulos(String tablero[][], int posFila, int posColumna) {
+		String[][] tableroN = new String[8][8];
 		
+		tableroN=tablero;
+		
+		for (int i = 0; i < tableroN.length; i++) {
 
-		for (int i = 0; i < tableroC.length; i++) {
+			for (int j = 0; j < tableroN[i].length; j++) {
 
-			for (int j = 0; j < tableroC[i].length; j++) {
-
-				if (tableroC[i][j] == null) {
-					tableroC[i][j] = "     ,";
+				if (tableroN[i][j] == null) {
+					tableroN[i][j] = "     ,";
 
 				}
 			}
 
 		}
-
-		return tableroC;
-
+		
+		return tableroN;
 	}
 
 }
