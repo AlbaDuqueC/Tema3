@@ -6,6 +6,7 @@ public class Ejercicio10 {
 		// Variables
 		
 		
+		
 
 	}
 
