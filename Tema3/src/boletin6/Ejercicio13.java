@@ -24,13 +24,13 @@ public class Ejercicio13 {
 
 		// Dice si las palabras son anagramas o no
 		if (sonAnagramas(palabra1, palabra2)) {
-			
+
 			System.out.println(palabra1 + " y " + palabra2 + " son anagramas.");
-			
+
 		} else {
-			
+
 			System.out.println(palabra1 + " y " + palabra2 + " no son anagramas.");
-			
+
 		}
 
 		// Cerrar el scanner
@@ -44,9 +44,9 @@ public class Ejercicio13 {
 		char[] array2;
 
 		// Elimina los espacios y convierte las palabras a minúsculas
-		palabra1 = palabra1.replaceAll("\\s", "").toLowerCase();
+		palabra1 = palabra1.replaceAll(" ", "").toLowerCase();
 
-		palabra2 = palabra2.replaceAll("\\s", "").toLowerCase();
+		palabra2 = palabra2.replaceAll(" ", "").toLowerCase();
 
 		// comprueba si la logitud es lamisma o no
 		if (palabra1.length() != palabra2.length()) {
@@ -56,12 +56,12 @@ public class Ejercicio13 {
 
 		// Convierte las palabras a arrays
 		array1 = palabra1.toCharArray();
-		
+
 		array2 = palabra2.toCharArray();
 
 		// Ordenar los arrays de caracteres
 		Arrays.sort(array1);
-		
+
 		Arrays.sort(array2);
 
 		// Comparar los arrays ordenados
