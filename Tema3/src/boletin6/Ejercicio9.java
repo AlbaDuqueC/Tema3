@@ -11,55 +11,26 @@ public class Ejercicio9 {
 
 		String frase;
 
-		String[] fraseT;
-		
-		String fraseCom="";
-
-		boolean javalandia;
-
 		Scanner sc = new Scanner(System.in);
 
 		System.out.println("Introduce una frase: ");
 
 		// Scanea y almacena la frase introducida
 		frase = sc.nextLine().toLowerCase();
-
-		// Introduce la frase y la almacena por palabras
-		fraseT = frase.split(" ");
 		
-		for (String i: fraseT) {
-			
-			fraseCom=fraseCom+i+" ";
-			
-			if(fraseCom== "Javalín, javalón") {
-				
-				javalandia=true;
-			
-				fraseCom="";
-			}
-			else if (i=="javalén") {
-				
-				fraseCom="javalén";
-				
-			}
-			else if(fraseCom== "javalén, len, len") {
-				
-				javalandia=true;
-				
-			}
-			
-			
-		}
 		
-		if(javalandia=true) {
+		if(( frase.endsWith("javalén, len, len"))) {
 			
 			System.out.println("Es de javalandia");
-			System.out.println(fraseCom);
+			
+		}else if (frase.startsWith("Javalín, javalón")){
+			
+			System.out.println("Es de javalandia");
+					
 			
 		}else {
 			
 			System.out.println("No es de javalandia");
-			System.out.println(fraseCom);
 			
 		}
 

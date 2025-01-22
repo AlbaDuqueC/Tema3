@@ -335,6 +335,7 @@ public class Ejercicio4 {
 
 	}
 	
+	//reina
 	static String[][] Nulos(String tablero[][], int posFila, int posColumna) {
 		String[][] tableroN = new String[8][8];
 		
