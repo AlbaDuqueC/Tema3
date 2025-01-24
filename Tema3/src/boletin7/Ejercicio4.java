@@ -1,8 +1,8 @@
 package boletin7;
 
-import java.util.ArrayList;
-import java.util.List;
+
 import java.util.Random;
+import java.util.TreeSet;
 
 public class Ejercicio4 {
 
@@ -14,27 +14,21 @@ public class Ejercicio4 {
 	 */
 
 	public static void main(String[] args) {
-		
-		List <Integer> Numeros = new ArrayList<>();
-		
-		Random rand= new Random();
-		
-		int num;
-		
-		
-		int tam=0;
-		
-		while(tam<20) {
-			while(Numeros.lastIndexOf(num)==num) {
-			num= rand.nextInt(0, 101);
-			
-			}
-			
+
+		TreeSet<Integer> Numeros = new TreeSet<Integer>();
+
+		Random rand = new Random();
+
+		int num = 0;
+
+		do {
+			num = rand.nextInt(0, 101);
+
 			Numeros.add(num);
-			
-			tam++;
-		}
-		
+
+		} while (Numeros.size() < 20);
+
+		System.out.println(Numeros);
 
 	}
 
