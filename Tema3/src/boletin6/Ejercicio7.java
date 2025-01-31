@@ -14,11 +14,11 @@ public class Ejercicio7 {
 
 		String palabra;
 		
-		int cont=0;
+		int pos;
 		
 		int numpalabra=0;
 		
-		int k;
+		
 
 		Scanner sc = new Scanner(System.in);
 
@@ -30,38 +30,11 @@ public class Ejercicio7 {
 
 		palabra = sc.nextLine();
 
-		for (int i = 0; i < frase.length(); i++) {
-			
-			k=i;
+		pos=frase.indexOf(palabra);
+		
+		
 
-			if (frase.charAt(i) == palabra.charAt(0)) {
-
-				for (int j = 0; j < palabra.length(); j++) {
-					
-					
-
-					if(frase.charAt(i) == palabra.charAt(j)) {
-						cont++;
-						
-						i++;
-					}
-					if(cont==palabra.length()) {
-						
-						numpalabra++;
-						
-						
-					}
-					
-					
-				}				
-				
-			}
-			
-			i=k;
-
-		}
-
-		System.out.println(numpalabra);
+		System.out.println(pos);
 	}
 
 }
